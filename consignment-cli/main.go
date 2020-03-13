@@ -52,5 +52,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("[Consignment CLI] Could not create consignment: %v", err)
 	}
-	log.Printf("Created consignment: %t", r.Created)
+	log.Printf("[Consignment CLI] Created consignment: %t", r.Created)
 }
