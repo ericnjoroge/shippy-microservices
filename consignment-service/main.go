@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "github.com/ericnjoroge/shippy-microservices/consignment-service"
+	pb "github.com/ericnjoroge/shippy-microservices/consignment-service/proto/consignment"
 )
 
 const (
