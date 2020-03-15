@@ -52,5 +52,15 @@ func main() {
 	if err != nil {
 		log.Fatalf("[Consignment CLI] Could not create consignment: %v", err)
 	}
+
+	getAll, err := client.GetConsignments(context.Background(), &pb.GetRequest{})
+	if err != nil {
+		log.Fatalf("[Consignment CLI] Could not list consignmemts: %v", err)
+	}
+
+	for _, v := range getAll.Consignments {
+		log.Println(v)
+	}
+
 	log.Printf("[Consignment CLI] Created consignment: %t", r.Created)
 }
